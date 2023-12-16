@@ -11,8 +11,6 @@ import { assets } from 'supernova';
 const bare = createBareServer("/bare/");
 const app = express();
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('./supernova'));
 app.use("/uv/", express.static(uvPath));
 app.use("/assets/", express.static(assets));
@@ -46,7 +44,7 @@ server.on("upgrade", (req, socket, head) => {
 
 let port = parseInt(process.env.PORT || "");
 
-if (isNaN(port)) port = 2002;
+if (isNaN(port)) port = 2001;
 
 server.on("listening", () => {
   const address = server.address();
