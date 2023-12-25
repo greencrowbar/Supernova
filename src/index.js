@@ -13,7 +13,6 @@ const app = express();
 
 app.use(express.static(websitePath));
 app.use("/uv/", express.static(uvPath));
-app.use("/assets/", express.static(assets));
 
 app.get('/', function(req, res) {
   res.sendFile(websitePath, "index.html");
