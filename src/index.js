@@ -11,7 +11,7 @@ import { assets } from 'supernova';
 const bare = createBareServer("/bare/");
 const app = express();
 
-app.use(express.static('./supernova'));
+app.use(express.static(websitePath));
 app.use("/uv/", express.static(uvPath));
 app.use("/assets/", express.static(assets));
 
