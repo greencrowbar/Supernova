@@ -6,7 +6,6 @@ import { join } from "node:path";
 import { hostname } from "node:os";
 import path from 'path';
 import { websitePath } from 'supernova';
-import { assets } from 'supernova';
 
 const bare = createBareServer("/bare/");
 const app = express();
